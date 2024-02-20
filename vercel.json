@@ -1,9 +1,0 @@
-{
-   "routes": [
-     { "src": "/(.*)", "dest": "/backend/server.js" }
-   ],
-   "rewrites": [],
-   "redirects": [],
-   "headers": []
- }
- 
