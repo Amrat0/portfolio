@@ -1,9 +1,11 @@
 {
-   "routes": [
-     { "src": "/(.*)", "dest": "/backend/server.js" }
-   ],
-   "rewrites": [],
-   "redirects": [],
-   "headers": []
- }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/backend/server.js" }
+  ],
+  "redirects": [],
+  "headers": [],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
+
  
