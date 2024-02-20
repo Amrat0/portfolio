@@ -29,7 +29,7 @@ const AdminPanel = () => {
     e.preventDefault();
     // e.prevent islya usekarta ha ka yah form pa laga hova ha
     dispatch(updateUser(name, email, password, skills, about));
-    console.log(name, email, password, skills, about);
+    // console.log(name, email, password, skills, about);
   };
 
   const logoutHandler = () => {
