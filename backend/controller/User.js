@@ -88,7 +88,7 @@ export const updateUser= async(req,res)=>{
        if(skills){
 
         if(skills.image1){
-          // await cloudinary.v2.uploader.destroy(user.skills.image1.public_id)
+          await cloudinary.v2.uploader.destroy(user.skills.image1.public_id)
           const myCloud= await cloudinary.v2.uploader.upload(skills.image1,{
             folder: "portfolio",
           });
