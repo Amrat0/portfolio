@@ -1,0 +1,126 @@
+.about {
+  background-color: hsl(219, 48%, 8%);
+  min-height: 100vh;
+  display: flex;
+}
+
+.aboutContainer {
+  background-color: rgb(212, 238, 180);
+  width: 60%;
+  height: 70vh;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: right;
+  padding: 2vmax;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgb(212, 238, 180);
+}
+@font-face {
+  font-family: aboutFont;
+  src: url(../myFonts/INFECTED.ttf);
+}
+.aboutContainer > p {
+  margin-top: 5vh;
+  font-family: "Roboto";
+  text-align: right;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 50px;
+  color: rgba(15, 15, 15, 0.719);
+  width: 35%;
+  font-size: 1.2vmax;
+}
+.aboutContainer2 {
+  width: 60%;
+  min-height: 80vh;
+  background-color: rgb(212, 238, 180);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 2vmax;
+  display: flex;
+  transform: translateX(-100vh) translateY(-10%) rotateZ(-360deg);
+  animation: aboutAnimation 1s ease-in forwards;
+}
+.aboutContainer2 > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1vmax;
+  box-sizing: border-box;
+  color: rgba(17, 17, 17, 0.712);
+}
+.aboutContainer2 > div:first-child {
+  align-items: center;
+}
+.aboutAvatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 2px 2px salmon;
+  transition: all 1s;
+}
+.aboutAvatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+@keyframes aboutAnimation {
+  to {
+    transform: translateX(20%) translateY(-10%);
+  }
+}
+@keyframes aboutAnimationPhone {
+  to {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+.logo {
+  font-size: 30px;
+  cursor: pointer;
+  gap: 20px;
+  display: flex;
+  width: 30%;
+}
+
+.instagram > a:hover {
+  color: rgb(119, 61, 212);
+}
+.whatsapp > a:hover {
+  color: rgb(79, 206, 93);
+}
+.linkedin > a:hover {
+  color: rgb(64, 88, 226);
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    align-items: center;
+  }
+  .aboutContainer {
+    display: none;
+    box-shadow: none;
+  }
+  .aboutContainer2 {
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    animation: aboutAnimationPhone 1s ease-in forwards;
+  }
+  .aboutContainer2 > div:last-child > p {
+    text-align: center !important;
+  }
+  .aboutAvatar {
+    margin-top: 50px;
+
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    transform: translateY(2%);
+  }
+  .logo {
+    font-size: 20px;
+    gap: 15px;
+  }
+}

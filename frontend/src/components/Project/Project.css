@@ -1,0 +1,182 @@
+.projects {
+  min-height: 100vh;
+  padding-top: 15vmax;
+  background-color: hsl(219, 48%, 8%);
+}
+
+.projects > h3 > p:hover {
+  transform: translateY(-12px);
+}
+.projects > h3 {
+  box-shadow: 0px -20px 2px -2px rgb(162, 185, 133);
+  text-align: center;
+  color: hsl(219, 48%, 8%);
+  position: absolute;
+  background-color: rgb(245, 228, 207);
+  padding: 2vmax 4vmax;
+  font-family: Hanged;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, -100vh);
+  animation: projectHeadingAnimation 1s ease-in-out forwards;
+}
+.projects > h3 > svg {
+  margin: 0.3vmax;
+}
+
+.projectWrapper {
+  box-shadow: 0px -11px 2px -2px rgb(212, 238, 180);
+
+  border-top: 100px solid rgb(245, 228, 207);
+  border-radius: 300px 300px 0 0;
+  background-color: rgb(212, 238, 180);
+  min-height: inherit;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5vmax;
+  padding-bottom: 10vmax;
+  overflow-x: hidden;
+}
+
+.projectCard {
+  width: 80%;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.712);
+  margin: 2vmax;
+  border-radius: 10px;
+  display: flex;
+  transform: translateX(-100vw);
+  animation: projectCardAnimation 1s ease-in-out forwards 0.5s;
+}
+
+.projectCard:nth-child(even) {
+  transform: translateX(100vw);
+  animation: projectCardAnimation 1s ease-in-out forwards 1s;
+}
+.projectCard > div {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.5s;
+}
+.projectCard > div:first-child::after {
+  content: "VIEW";
+  border-radius: 10px;
+  display: flex;
+  width: 4em;
+  height: 5vh;
+  font: 500 1.1rem "Roboto";
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(13, 96%, 21%);
+  color: white;
+}
+
+.projectCard > div:first-child > h5 {
+  text-align: center;
+  padding: 2vmax;
+}
+.projectCard > div:last-child {
+  padding: 3vmax;
+}
+.projectCard > div:last-child > h4 {
+  text-align: center;
+}
+.projectCard > :last-child > p {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  text-align: right;
+}
+.projectCard > div:last-child > h6 {
+  font-family: "Ubuntu Mono";
+  font-weight: bold;
+  color: black;
+}
+.projectCard > div > img {
+  width: inherit;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2%;
+}
+.projectCard:hover div:first-child {
+  filter: hue-rotate(240deg) blur(4px);
+}
+@keyframes projectCardAnimation {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes projectHeadingAnimation {
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .projectCard {
+    flex-direction: column;
+  }
+  .projectCard > div > img {
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: inherit;
+    border-radius: 10px;
+    margin-left: 25px;
+  }
+  .projectCard > div {
+    justify-content: center;
+  }
+  .projectCard > div:first-child::after {
+    content: "VIEW";
+    border-radius: 10px;
+    display: flex;
+    width: 4em;
+    height: 5vh;
+    font: 500 1.1rem "Roboto";
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(14, 96%, 19%);
+    color: white;
+  }
+  .projectCard > div:last-child > h4 {
+    text-align: center;
+    margin-left: 18px;
+    font-size: 24px;
+    font-weight: 900;
+    width: 250px;
+    letter-spacing: 4px;
+  }
+
+  .projectCard > div:last-child > p {
+    text-align: center;
+    margin-left: 18px;
+    margin-bottom: 15px;
+  }
+  .projectCard > div:last-child > h6 {
+    font-weight: 900;
+    text-align: center;
+    margin-left: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+  }
+  .projects > h3 {
+    margin-top: 15px;
+  }
+  .projectWrapper {
+    border-top: 80px solid rgb(245, 228, 207);
+  }
+  .projects > h3 {
+    box-shadow: 0px -15px 2px -2px rgb(162, 185, 133);
+    padding: 1.2vmax 4vmax;
+  }
+}
